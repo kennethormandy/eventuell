@@ -28,7 +28,7 @@ harp compile
 
 ## Contributing
 
-Thanks for considering contributing! There’s information about how to [get started with Default here](CONTRIBUTING.md).
+Thanks for considering contributing! There’s information about how to [get started with Eventuell here](CONTRIBUTING.md).
 
 ## License
 

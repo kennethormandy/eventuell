@@ -1,0 +1,24 @@
+{
+  "globals": {
+    "merge": {
+      "content": "*|GOODBITS_CONTENT|*",
+      "header": "*|GOODBITS_HEADER|*",
+      "subheader": "*|GOODBITS_SUBHEADER|*",
+      "description": "*|GOODBITS_DESCRIPTION|*",
+      "footer": "*|GOODBITS_FOOTER|*",
+      "title": "*|GOODBITS_TITLE|*",
+      "issue": "*|GOODBITS_ISSUE_NUMBER|*",
+
+      "fname": "*|FNAME|*",
+      "email": "*|EMAIL|*",
+      "year": "*|CURRENT_YEAR|*",
+      "company": "*|LIST:COMPANY|*",
+      "address": "*|HTML:LIST_ADDRESS_HTML|**|END:IF|*",
+      "twitter": "*|TWITTER:PROFILEURL|*",
+      "forward": "*|FORWARD|*",
+      "unsub": "*|UNSUB|*",
+      "update": "*|UPDATE_PROFILE|*",
+      "reward": "*|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*"
+    }
+  }
+}

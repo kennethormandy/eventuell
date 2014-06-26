@@ -1,0 +1,25 @@
+{
+  "name": "eventuell",
+  "version": "0.1.0",
+  "description": "Send email newsletters with Goodbits, and good type.",
+  "author": "Kenneth Ormandy <kenneth@chloi.io> (http://kennethormandy.com/)",
+  "homepage": "https://github.com/kennethormandy/hb-goodbits",
+  "repository": "https://github.com/kennethormandy/hb-goodbits.git",
+  "license": "MIT",
+  "main": "public/index.jade",
+  "keywords": [
+    "email",
+    "newsletter",
+    "marketing",
+    "template",
+    "harp"
+  ],
+  "devDependencies": {
+    "Ink": "git://github.com/renemeye/ink.git#feature-variable-scss",
+    "bourbon": "git://github.com/thoughtbot/bourbon#bourbon-3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: No test specified, but greatly appriciate if you want to add them to kennethormandy/eventuell\" && exit 1"
+  },
+
+}

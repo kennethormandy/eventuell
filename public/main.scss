@@ -1,0 +1,62 @@
+@import url("http://fonts.googleapis.com/css?family=Fira+Sans:400,700|Vollkorn:400");
+
+// Variables
+// ---------
+
+$base-font-size: 18.5px;
+$base-line-height: 1.4;
+$base-border-radius: 3px;
+
+$font-family-sans: "Fira Sans", "Fira Sans OT", "AvenirNextCondensed-Bold", "Avenir Next Condensed", "AvenirNext-Bold", "Avenir Next", "Verdana-Bold", Verdana, "Droid Sans", sans-serif;
+$font-family-serif: "Vollkorn", Georiga, serif;
+
+$color-primary: cornflowerblue;
+$color-text: #555;
+$color-gray-light: #EEE;
+$color-gray-dark: lighten($color-text, 20%);
+
+@import "vendor/wink";
+
+// Goodbits
+// --------
+
+.goodbits-aside {
+  vertical-align: middle;
+  text-align: right;
+}
+
+.goodbits-afterwards {
+  p {
+    font-size: $base-font-size * 0.8;
+    // text-align: center;
+    color: $color-gray-dark;
+  }
+}
+
+.link-content {
+  @media only screen and (max-width: 600px) {
+    .text-pad {
+      padding: 0 !important;
+    }
+  }
+
+  // Leading numerals
+  // ----------------
+  // counter-increment: section;
+  // .thumbnail-pad {
+  //   &:before {
+  //     content: counter(section);
+  //     display: block;
+  //     position: absolute;
+  //     color: #FFF;
+  //     font-family: $font-family-sans;
+  //     font-size: $base-font-size * 5;
+  //     text-align: center;
+  //     width: 100%;
+  //     // color: rgba($color-primary, 0.5);
+  //     // background: rgba(0, 0, 0, 0.25);
+  //     text-shadow: 0 0 50px rgba(0,0,0,0.33), 0 1px 0 rgba(0,0,0,0.125);
+  //     font-weight: 700;
+  //   }
+  // }
+}

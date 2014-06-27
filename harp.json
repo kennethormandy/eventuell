@@ -13,7 +13,7 @@
       "email": "*|EMAIL|*",
       "year": "*|CURRENT_YEAR|*",
       "company": "*|LIST:COMPANY|*",
-      "address": "*|HTML:LIST_ADDRESS_HTML|**|END:IF|*",
+      "address": "*|LIST_ADDRESS|*",
       "twitter": "*|TWITTER:PROFILEURL|*",
       "forward": "*|FORWARD|*",
       "unsub": "*|UNSUB|*",

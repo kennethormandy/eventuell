@@ -21,15 +21,20 @@ $color-gray-dark: lighten($color-text, 20%);
 // --------
 
 .goodbits-aside {
-  vertical-align: middle;
-  text-align: right;
+  vertical-align: middle !important;
+  text-align: right !important;
 }
 
 .goodbits-afterwards {
-  p {
-    font-size: $base-font-size * 0.8;
+  p, div, span {
+    font-size: $base-font-size * 0.8 !important;
     // text-align: center;
-    color: $color-gray-dark;
+    color: $color-gray-dark !important;
+  }
+  a {
+    font-size: $base-font-size * 0.8 !important;
+    color: desaturate($color-primary, 33%) !important;
+    text-decoration: none !important;
   }
 }
 

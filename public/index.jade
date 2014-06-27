@@ -1,57 +1,21 @@
 doctype strict
 html(xmlns="http://www.w3.org/1999/xhtml")
   head
-      meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
-      meta(name="viewport", content="width=device-width")
-      //
-         Change to style block
-      link(href="main.css", rel="stylesheet", type="text/css")
-      //- | <style type="text/css">
-      //- @import "main.css";
-      //- | </style>
-    body
-      table.body
-        tr
-          td.center(align="center", valign="top")
-            center
-              table.row.header
-                tr
-                  td.center(align="center")
-                    center
-                      table.container
-                        tr
-                          td.wrapper.last
-                            table.twelve.columns
-                              tr
-
-                                //-
-                                  Full width on small screens, and visually
-                                  align with description on large screens.
-
-                                td.three.sub-columns.text-pad.hide-for-small
-                                td.six.sub-columns.text-pad
-                                  img(src="images/wordmark.png" height="50")
-                                td.three.sub-columns.last.text-pad.last.goodbits-aside
-
-                                  //-
-                                    Issue Number
-                                    ------------
-
-                                    If we’re in a development environment, ex. `harp server`,
-                                    then hard-code the issue number.
-
-                                    Otherwise, use the actual Goodbits / MailChimp Merge tag.
-
-                                  | Issue №
-                                  if environment === "development"
-                                    | 14
-                                  else
-                                    != merge.issue
-                                td.expander
-              table.container
-                tr
-                  td
-                    table.row
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width")
+    //-
+       Change to style block
+    link(href="main.css", rel="stylesheet", type="text/css")
+  body
+    table.body(border="0" cellpadding="0" cellspacing="0" height="100%" width="100%")
+      tr
+        td.center(align="center", valign="top")
+          center
+            table.row.header
+              tr
+                td.center(align="center")
+                  center
+                    table.container
                       tr
                         td.wrapper.last
                           table.twelve.columns
@@ -61,121 +25,161 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                                 Full width on small screens, and visually
                                 align with description on large screens.
 
-                              td.three.sub-columns.text-pad.hide-for-small &nbsp;
-                              td.twelve.sub-columns.text-pad
+                              td.three.sub-columns.text-pad.hide-for-small
+                              td.six.sub-columns.text-pad
+                                img(src="images/wordmark.png" height="50")
+                              td.three.sub-columns.last.text-pad.last.goodbits-aside
 
                                 //-
-                                  Description
-                                  -----------
-
-                                  If we’re in a development environment, ex. `harp server`,
-                                  then hard-code the issue number.
-
-                                  Otherwise, use the actual Goodbits / MailChimp Merge tag.
-
-                                if environment === "development"
-                                  p Hey there,
-                                  p Thanks for checking out the first issue of my newsletter. You get to fill out this text on <a href="http://goodbits.io">Goodbits</a>.
-                                else
-                                  p Hey #{ merge.fname },
-                                  p!= merge.description
-
-                              td.expander
-                    table.row
-                      tr
-                        td.wrapper.last
-                          table.twelve.columns
-                            tr
-                              td.text-pad
-
-                                //-
-                                  Main Content
+                                  Issue Number
                                   ------------
 
                                   If we’re in a development environment, ex. `harp server`,
-                                  then bring in a partial of example content.
-
-                                  Otherwise, use the actual Goodbits / MailChimp Merge tag.
-
-                                if environment === "development"
-                                  include _includes/example.jade
-                                else
-                                  != merge.content
-
-                              td.expander
-
-                    table.row
-                      tr
-                        td.wrapper.last
-                          table.twelve.columns
-                            tr
-                              td.three.sub-columns.text-pad.hide-for-small &nbsp;
-                              td.twelve.sub-columns.text-pad.footer
-
-                                //-
-                                  Footer
-                                  ------
-
-                                  If we’re in a development environment, ex. `harp server`,
                                   then hard-code the issue number.
 
                                   Otherwise, use the actual Goodbits / MailChimp Merge tag.
 
+                                | Issue №
                                 if environment === "development"
-                                  p That wraps up out the first issue of my newsletter. You get to fill out this text on <a href="http://goodbits.io">Goodbits</a>.
-                                  p Thanks for reading!
+                                  | 14
                                 else
-                                  != merge.footer
-
+                                  != merge.issue
                               td.expander
+            table.container
+              tr
+                td
+                  table.row
+                    tr
+                      td.wrapper.last
+                        table.twelve.columns
+                          tr
+
+                            //-
+                              Full width on small screens, and visually
+                              align with description on large screens.
+
+                            td.three.sub-columns.text-pad.hide-for-small &nbsp;
+                            td.twelve.sub-columns.text-pad
+
+                              //-
+                                Description
+                                -----------
+
+                                If we’re in a development environment, ex. `harp server`,
+                                then hard-code the issue number.
+
+                                Otherwise, use the actual Goodbits / MailChimp Merge tag.
+
+                              if environment === "development"
+                                p Hey there,
+                                p Thanks for checking out the first issue of my newsletter. You get to fill out this text on <a href="http://goodbits.io">Goodbits</a>.
+                              else
+                                p Hey #{ merge.fname },
+                                p!= merge.description
+
+                            td.expander
+                  table.row
+                    tr
+                      td.wrapper.last
+                        table.twelve.columns
+                          tr
+                            td.text-pad
+
+                              //-
+                                Main Content
+                                ------------
+
+                                If we’re in a development environment, ex. `harp server`,
+                                then bring in a partial of example content.
+
+                                Otherwise, use the actual Goodbits / MailChimp Merge tag.
+
+                              if environment === "development"
+                                include _includes/example.jade
+                              else
+                                != merge.content
+
+                            td.expander
+
+                  table.row
+                    tr
+                      td.wrapper.last
+                        table.twelve.columns
+                          tr
+                            td.three.sub-columns.text-pad.hide-for-small &nbsp;
+                            td.twelve.sub-columns.text-pad.footer
+
+                              //-
+                                Footer
+                                ------
+
+                                If we’re in a development environment, ex. `harp server`,
+                                then hard-code the issue number.
+
+                                Otherwise, use the actual Goodbits / MailChimp Merge tag.
+
+                              if environment === "development"
+                                p That wraps up out the first issue of my newsletter. You get to fill out this text on <a href="http://goodbits.io">Goodbits</a>.
+                                p Thanks for reading!
+                              else
+                                != merge.footer
+
+                            td.expander
 
 
-                    table.row
-                      tr
-                        td.wrapper.last
-                          table.twelve.columns.last
-                            tr
-                              td.three.sub-columns.hide-for-small &nbsp;
-                              td.twelve.sub-columns.panel
-                                p
-                                  | Sometimes I post these links during the week. If you’re into that sort of thing, you can&nbsp;
-                                  a(href="!{ environment === 'development' ? 'http://twitter.com/kennethormandy' : merge.unsub }") follow me on Twitter
-                                  | .
-                              td.expander
-                          table.twelve.columns.last.goodbits-afterwards
-                            tr
-                              td.three.sub-columns.hide-for-small &nbsp;
-                              td.twelve.sub-columns.last
+                  table.row
+                    tr
+                      td.wrapper.last
+                        table.twelve.columns.last
+                          tr
+                            td.three.sub-columns.hide-for-small &nbsp;
+                            td.twelve.sub-columns.panel
+                              p
+                                | Sometimes I post these links during the week. If you’re into that sort of thing, you can&nbsp;
+                                if environment === 'development'
+                                  a(href="http://twitter.com/kennethormandy") follow me on Twitter
+                                else
+                                  a(href=merge.twitter) follow me on Twitter
+                                | .
+                            td.expander
+                        table.twelve.columns.last.goodbits-afterwards
+                          tr
+                            td.three.sub-columns.hide-for-small &nbsp;
+                            td.twelve.sub-columns.last
+                              br
+                              p Copyright &copy;&nbsp;
+                                if environment === "development"
+                                  != new Date().getFullYear() + " Kenneth Ormandy & Chloi Inc."
+                                else
+                                  != merge.year + " " + merge.company
                                 br
-                                p Copyright &copy;&nbsp;
-                                  if environment === "development"
-                                    != new Date().getFullYear() + " Kenneth Ormandy & Chloi Inc."
-                                  else
-                                    != merge.year + " " + merge.company
-                                  br
-                                  if environment === "development"
-                                    div
-                                      span Chloi Inc.
-                                        div
-                                          div 604-55 East Cordova Street, Vancouver, BC, Canada
-                                          span Vancouver,
-                                          span BC
-                                          span V6A
-                                          div Canada
-                                          br
-                                          a("#") Add us to your address book
-                                  else
-                                    != merge.address
-                                p
-                                  | This newsletter was sent to !{ environment === 'development' ? 'someone@example.com' : merge.email }.
-                                  | You can <a href="!{ environment === 'development' ? '#' : merge.unsub }">unsubscribe</a> at anytime.
-                                  | Or, just <a href="!{ environment === 'development' ? '#' : merge.update }">update your preferences</a>.
-
                                 if environment === "development"
-                                  a(href="http://mailchimp.com")
-                                    img(src="http://cdn-images.mailchimp.com/monkey_rewards/MC_MonkeyReward_15.png" border="0" alt="Email Marketing Powered by MailChimp" title="MailChimp Email Marketing" width="139" height="54")
-                                  p.goodbits-aside Powered by <a href="http://goodbits.io">Goodbits.io</a>
+                                  div
+                                    span Chloi Inc.
+                                      div
+                                        div 604-55 East Cordova Street, Vancouver, BC, Canada
+                                        span Vancouver,
+                                        span BC
+                                        span V6A
+                                        div Canada
+                                        br
+                                        a("#") Add us to your address book
                                 else
-                                  != merge.rewards
+                                  != merge.address
+                              p
+                                | This newsletter was sent to&nbsp;
+                                if environment === 'development'
+                                  a(href="#") someone@example.com
+                                else
+                                  a(href="mailto:#{ merge.email }")= merge.email
+                                | . You can <a href="!{ environment === 'development' ? '#' : merge.unsub }">unsubscribe</a> at anytime.
+                                | Or, just <a href="!{ environment === 'development' ? '#' : merge.update }">update your preferences</a>.
 
-                              td.expander
+                              if environment === "development"
+                                a(href="http://mailchimp.com")
+                                  img(src="http://cdn-images.mailchimp.com/monkey_rewards/MC_MonkeyReward_15.png" border="0" alt="Email Marketing Powered by MailChimp" title="MailChimp Email Marketing" width="139" height="54")
+                                p.goodbits-aside Powered by <a href="http://goodbits.io">Goodbits.io</a>
+                              else
+                                != merge.rewards
+
+                            td.expander

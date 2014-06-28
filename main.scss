@@ -15,7 +15,7 @@ $color-text: #555;
 $color-gray-light: #EEE;
 $color-gray-dark: lighten($color-text, 20%);
 
-@import "vendor/wink";
+@import "node_modules/wink/src/wink";
 
 // Goodbits
 // --------

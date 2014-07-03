@@ -24,7 +24,12 @@ When you’re ready to compile for MailChimp:
 harp compile
 ```
 
-…and the placeholder text is replaced with Goodbits template tags.
+…and the placeholder text is replaced with Goodbits template tags. Right now, you still have
+add the resulting styles from `www/main.css` into the head of `www/index.html`, and then run
+it all through an inlining tool [like MailChimp’s](http://templates.mailchimp.com/resources/inline-css/).
+This is a less-than-ideal workflow. I’m hoping to take care of it through Harp in a later version.
+It’s probably better to just use [kennethormandy/wink](https://github.com/kennethormandy/wink)
+in the meantime. (Or, something else entirely!)
 
 ## Contributing
 

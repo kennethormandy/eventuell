@@ -13,9 +13,14 @@ Send email newsletters with <a href="http://goodbits.io">Goodbits</a>, and good 
 More to come!
 
 ```bash
+# Install Harp globally
 npm install -g harp
+
+# Install dependencies locally
+npm install
+
+# Serve template at http://localhost:9000
 harp server
-# Visit http://localhost:9000
 ```
 
 When you’re ready to compile for MailChimp:

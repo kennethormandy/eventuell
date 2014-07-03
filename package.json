@@ -14,8 +14,8 @@
     "template",
     "harp"
   ],
-  "devDependencies": {
-    "wink": "git://github.com/kennethormandy/wink"
+  "dependencies": {
+    "wink": "git://github.com/kennethormandy/wink#v0.2.1"
   },
   "scripts": {
     "test": "echo \"Error: No test specified, but greatly appriciate if you want to add them to kennethormandy/eventuell\" && exit 1"
